@@ -1,13 +1,48 @@
-<IDOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网站</title>
+    <title>Hybrid-Granularity Image-Music Retrieval</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            text-align: justify;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-    <h3>欢迎来到我的网站</h3>
-    <a href-"https://space.bilibili.com/1076095077">我的B站主页</a>
+    <div class="container">
+        <h1>Hybrid-Granularity Image-Music Retrieval Using Contrastive Learning</h1>
+        <p><strong>Authors:</strong> Xudong He, Li Wang, Zhao Wang</p>
+        <p><strong>Institutions:</strong> Zhejiang University, College of Computer Sciences and Technology, Zhejiang University</p>
+        <p><strong>Abstract:</strong> This paper addresses the high-granularity image-music retrieval task by leveraging a modality-joint embedding space, which is learned by hybrid-granularity semantics alignment between images and music using contrastive learning technique. The authors construct a dataset with 66,048 music-image pairs and propose hybrid-granularity contrastive learning losses to ensure music-image alignment in both cross-modality and intra-modality. The approach is evaluated through crossmodal retrieval tasks, demonstrating alignment of images and music in high granularity and outperforming state-of-the-art methods in cross-modal music retrieval tasks.</p>
+        <h2>Introduction</h2>
+        <p>The paper discusses the challenges of high-granularity queries in music retrieval systems and how traditional search engines struggle with ambiguous language descriptions. The authors introduce their framework, HG-CLIM, which uses a hybrid-granularity contrastive learning approach to align images and music at both coarse and fine granularity levels.</p>
+        <h2>Methodology</h2>
+        <p>The methodology includes feature extraction using ConvNext for images and PaSST for music, followed by projection into a joint embedding space. The authors propose a novel loss term, HG-CLIM loss, which accounts for learning a shared embedding space on both coarse-granularity and fine-granularity levels.</p>
+        <h2>Experiments</h2>
+        <p>The authors constructed a dataset, MIPNet, containing 66,048 image-music pairs with emotional labels. The experiments conducted on this dataset demonstrate the effectiveness of the proposed method for cross-modal and intra-modal music retrieval tasks.</p>
+        <h2>Conclusion</h2>
+        <p>The paper concludes that the proposed HG-CLIM framework shows promise for image-based music retrieval on high-granularity queries and suggests future work to integrate large language models for more robust joint embedding space learning.</p>
+        <h2>References</h2>
+        <p>A list of references cited in the paper is provided, showcasing the research's foundation and related works in the field.</p>
+    </div>
 </body>
 </html>
