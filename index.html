@@ -57,6 +57,10 @@
             text-align: center;
             margin-bottom: 30px;
         }
+        figure#large-space {
+            margin-top: 50px;
+            margin-bottom: 50px; /* Increased space around the figure */
+        }
         footer {
             text-align: center;
             margin-top: 50px;
@@ -88,7 +92,7 @@
 </div>
 
 <figure>
-    <img src="example-figure1.png" alt="Image-Music Retrieval Example" width="600">
+    <img src="dataset.png" alt="Image-Music Retrieval Example" width="600">
     <figcaption>Figure 1: Examples of prior image-based music retrieval methods mismatching unrelated contexts.</figcaption>
 </figure>
 
@@ -97,8 +101,8 @@
     <p>The HG-CLIM framework incorporates both coarse-granularity and fine-granularity retrieval methods. It utilizes ConvNext and PaSST encoders to extract image and music features, which are projected into a shared embedding space for better cross-modal alignment.</p>
 </div>
 
-<figure>
-    <img src="example-framework.png" alt="HG-CLIM Framework" width="600">
+<figure id="large-space">
+    <img src="framework.png" alt="HG-CLIM Framework" width="600">
     <figcaption>Figure 2: Overview of the HG-CLIM framework.</figcaption>
 </figure>
 
