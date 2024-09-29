@@ -65,11 +65,28 @@
             text-align: center;
             margin-top: 50px;
         }
+        .github-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .github-icon {
+            width: 24px; /* Adjust size as needed */
+            height: 24px;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
 
 <h1>Hybrid-Granularity Image-Music Retrieval Using Contrastive Learning between Images and Music</h1>
+
+<div class="github-link">
+    <a href="https://github.com/Blossomers/HG-CLIM" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="github-icon">
+    </a>
+</div>
 
 <div class="authors">
     <p>Xudong He<sup>1</sup>, Li Wang<sup>1</sup>, Zhao Wang<sup>1</sup>, Jun Xiao<sup>1</sup></p>
@@ -102,7 +119,7 @@
 </div>
 
 <figure id="large-space">
-    <img src="Framework.pdf" alt="HG-CLIM Framework" width="600">
+    <img src="Framework.png" alt="HG-CLIM Framework" width="600">
     <figcaption>Figure 2: Overview of the HG-CLIM framework.</figcaption>
 </figure>
 
@@ -110,7 +127,6 @@
 <div class="section">
     <h3>4.1 Results on MIPNet Dataset</h3>
     <p>We tested our HG-CLIM framework on the MIPNet dataset using various metrics such as MRR, R@10, and P@1. The results show that our method significantly outperforms previous models like EMO-CLIM and VM-NET.</p>
-
     <table>
         <thead>
             <tr>
@@ -138,6 +154,73 @@
                 <td>0.5124 / 0.5104</td>
                 <td>0.8080 / 0.8082</td>
                 <td>0.2931 / 0.2910</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>4.2 Results on Emotion-aligned Music Retrieval</h3>
+    <p>Our method also shows compeitive abilitiy in emotion-based music retrieval task.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>MRR</th>
+                <th>R@10</th>
+                <th>P@1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MMTS</td>
+                <td>0.4575 / 0.4807</td>
+                <td>0.6887 / 0.7123</td>
+                <td>0.4070 / 0.4188</td>
+            </tr>
+            <tr>
+                <td>EMO-CLIM</td>
+                <td>0.4619 / 0.5072</td>
+                <td>0.8237 / 0.7986</td>
+                <td>0.4917 / 0.4935</td>
+            </tr>
+            <tr>
+                <td>HG-CLIM (ours)</td>
+                <td>0.4765 / 0.5123</td>
+                <td>0.8215 / 0.7921</td>
+                <td>0.5033 / 0.5094</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>4.3 Ablation Studies</h3>
+    <p>The results of the ablation studies demonstrate that the fine-granularity loss significantly aids the model in learning implicit context-specific information.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Loss</th>
+                <th>MRR (I → M)</th>
+                <th>MRR (M → I)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Baseline</td>
+                <td>0.3164</td>
+                <td>0.2662</td>
+            </tr>
+            <tr>
+                <td>Baseline + Lintra<sub>fine</sub></td>
+                <td>0.3272</td>
+                <td>0.3196</td>
+            </tr>
+            <tr>
+                <td>Baseline + Linter<sub>fine</sub></td>
+                <td>0.4793</td>
+                <td>0.4761</td>
+            </tr>
+            <tr>
+                <td>Baseline + L<sub>fine</sub> (HG-CLIM)</td>
+                <td>0.5124</td>
+                <td>0.5104</td>
             </tr>
         </tbody>
     </table>
